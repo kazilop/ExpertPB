@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.Bottom"
+             Title="Расчет цилиндрического днища">
+   <ScrollView>
+       <StackLayout Padding="5,30,5,5">
+           <Label Text="Страница в разработке..." TextColor="Red" FontSize="Large"></Label>
+           <StackLayout Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+               <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Ввод основных данных"></Label>
+           </StackLayout>
+
+           <Picker x:Name="Picker_typeDN" Title="Выбери тип днища"></Picker>
+
+           <StackLayout x:Name="Ellipse_DN" IsVisible="False" IsEnabled="False">
+
+           <StackLayout Orientation="Horizontal">
+               <!--Давление-->
+               <Label Text="Введи расчетное давление Pрасч, МПа " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+               <Entry Placeholder="2 МПа" HorizontalOptions="CenterAndExpand" x:Name="DN_P_ras"></Entry>
+           </StackLayout>
+
+           <StackLayout Orientation="Horizontal">
+               <!--Темпрература-->
+               <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи расчетную температуру T, C "></Label>
+               <Entry Placeholder=" 20 C" HorizontalOptions="CenterAndExpand" x:Name="DN_T_ras"></Entry>
+           </StackLayout>
+           </StackLayout>
+
+
+
+           <!--    ПОЛУСФЕРИЧЕСКИЕ ДНИЩА                                             ////////////////////////////////////////////-->
+            <StackLayout x:Name="PoluEllipse_DN" IsVisible="False" IsEnabled="False" BackgroundColor="AliceBlue">
+
+               <StackLayout Orientation="Horizontal">
+                   <!--Давление-->
+                   <Label Text="Введи расчетное давление Pрасч, МПа " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+                   <Entry Placeholder="2 МПа" HorizontalOptions="CenterAndExpand" x:Name="PL_DN_P_ras"></Entry>
+               </StackLayout>
+
+               <StackLayout Orientation="Horizontal">
+                   <!--Темпрература-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи расчетную температуру T, C "></Label>
+                   <Entry Placeholder=" 20 C" HorizontalOptions="CenterAndExpand" x:Name="PL_DN_T_ras"></Entry>
+               </StackLayout>
+           </StackLayout>
+
+
+        </StackLayout>
+   </ScrollView>
+</ContentPage>

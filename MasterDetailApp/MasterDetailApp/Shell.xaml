@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailApp.Shell"
+             Title="Расчет обечайки">
+    <ScrollView x:Name="Scroll">
+    <StackLayout Padding="5,30,5,5">
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+        <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Ввод основных данных"></Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">    <!--Давление-->
+            <Label Text="Введи расчетное давление Pрасч, МПа " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+            <Entry Placeholder="2 МПа" HorizontalOptions="CenterAndExpand" x:Name="P_ras"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">    <!--Темпрература-->
+            <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи расчетную температуру T, C "></Label>
+            <Entry Placeholder=" 20 C" HorizontalOptions="CenterAndExpand" x:Name="T_ras"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">   <!--Диаметр-->
+            <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи внутренний диаметр обечайки, мм "></Label>
+            <Entry Placeholder=" 1000 мм" HorizontalOptions="CenterAndExpand" x:Name="D_obech"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">    <!-- толщина стенки-->
+            <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи толщину стенки s, мм "></Label>
+            <Entry Placeholder=" 10 мм" HorizontalOptions="CenterAndExpand" x:Name="s_obech"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">   <!-- Допускаемое напряжение-->
+            <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Допускаемое напряжение, МПа "></Label>
+            <Entry Placeholder=" 186 МПа" HorizontalOptions="CenterAndExpand" x:Name="Fi_dop"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="DarkGoldenrod"> <!-- Допускаемое напряжение-->
+            <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Ввод прибавок на коррозию"></Label>
+           
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal"> <!-- Прибавка на коррозию-->
+                <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи сумму всех прибавок: на коррозию + компенсация минусового допуска + технологическая прибавка "></Label>
+            <Entry Placeholder=" 0 " HorizontalOptions="CenterAndExpand" x:Name="pribavka"></Entry>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+                <!-- Коэффициент прочности продольного сварного шва φр =-->
+                <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Коэффициент прочности продольного сварного шва φр = "></Label>
+            <Entry Placeholder=" 1 " HorizontalOptions="CenterAndExpand" x:Name="Svarnoy"></Entry>
+        </StackLayout>
+
+            <Button Text="Рассчитать" HorizontalOptions="CenterAndExpand" Clicked="BtnRas_clk"></Button>    <!-- Кнопка-->
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+                <Label>
+                    <Label.Text>
+                    Расчетная толщина стенки обечайки: 
+                    Sр = p*D/(2*[σ]*φр - p) =  
+                    </Label.Text>
+                </Label>
+            <Label Text=" " x:Name="S_ras" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium" HorizontalTextAlignment="Center"></Label>
+            </StackLayout>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+            <Label HorizontalOptions="Start">
+                <Label.Text>
+                    Допускаемое внутреннее давление: 
+                    [p] = 2*[σ]*φр*(s-c)/(D + (s-c))=
+                </Label.Text>
+            </Label>
+            <Label Text=" " x:Name="P_dop" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"  HorizontalTextAlignment="Start"></Label>
+        </StackLayout>
+
+        <StackLayout x:Name="StackL"  Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+    
+            <Label Text=" " x:Name="Rezultat" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"  HorizontalTextAlignment="Start"></Label>
+        </StackLayout>
+
+        <StackLayout x:Name="StackDavln"  Orientation="Horizontal" BackgroundColor="DarkGoldenrod">
+            <Label Text=" " x:Name="RezultatDavlenie" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"  HorizontalTextAlignment="Start"></Label>
+        </StackLayout>
+
+        <!-- Коэффициент запаса прочности -->
+            <StackLayout x:Name="ZapasProch"  Orientation="Horizontal" BackgroundColor="Salmon">
+            <Label Text=" " x:Name="LabelZapas" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Medium"  HorizontalTextAlignment="Start"></Label>
+        </StackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MasterDetailApp"
+             x:Class="MasterDetailApp.MainPage"
+                  Title="MasterApp">
+<MasterDetailPage.Master>
+    <ContentPage Title="Master" BackgroundColor="LightBlue">
+        <ContentPage.Content>
+            <StackLayout Padding="5,35,5,5">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="gaz.png" VerticalOptions="Center"></Image>
+                    <Label Text="    Эксперт ПБ   " VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                  
+                </StackLayout>
+              
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="25" HeightRequest="25" Aspect="AspectFit" Source="bottom.png" HorizontalOptions="Start"></Image>
+                        <Button Text="Расчет цил. обечайки" Clicked="BtnShell_clk" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image WidthRequest="25" HeightRequest="25" Aspect="AspectFit" Source="truba.png" HorizontalOptions="Start"></Image>
+                    <Button Text="Расчет прочности днища" Clicked="BtnBottom_clk" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+
+                </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</MasterDetailPage.Master>
+  
+    <MasterDetailPage.Detail>
+        <ContentPage>
+        <ContentPage.Content>
+           <Label Text="DetailPage" HorizontalOptions="Center"></Label>
+        </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

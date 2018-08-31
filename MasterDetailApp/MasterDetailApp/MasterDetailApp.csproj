@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Expert.PB</AssemblyName>
+    <RootNamespace>Expert</RootNamespace>
+    <ApplicationIcon>ExpetPB.ico</ApplicationIcon>
+    <Win32Resource />
+    <Version>0.1.1</Version>
+    <Authors>Rybka Artem</Authors>
+    <Company>OOO TCT</Company>
+    <Copyright>Rybka Artem</Copyright>
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.561731" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Bottom.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Shell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
