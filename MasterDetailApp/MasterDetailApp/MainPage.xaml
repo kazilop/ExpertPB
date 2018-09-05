@@ -6,7 +6,7 @@
                   Title="MasterApp">
 <MasterDetailPage.Master>
     <ContentPage Title="Master" BackgroundColor="LightBlue">
-        <ContentPage.Content>
+        <ContentPage.Content >
             <StackLayout Padding="5,35,5,5">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="gaz.png" VerticalOptions="Center"></Image>

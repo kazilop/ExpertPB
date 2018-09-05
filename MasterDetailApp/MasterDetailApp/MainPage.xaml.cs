@@ -15,15 +15,15 @@ namespace MasterDetailApp
 		{
 			InitializeComponent();
 
-            Detail = new NavigationPage(new Shell())
-            {
-                BarBackgroundColor = NavColor
-            };
+		    Detail = new NavigationPage(new Shell())
+		    {
+		        BarBackgroundColor = NavColor
+		    };
 		    IsPresented = true;
 
 		}
 
-        private void BtnShell_clk(object sender, EventArgs e)
+        private void BtnShell_clk(object sender, EventArgs e)  // кнопка Обечайка
         {
             Detail = new NavigationPage(new Shell())
             {
@@ -32,7 +32,7 @@ namespace MasterDetailApp
             IsPresented = false;
         }
 
-        private void BtnBottom_clk(object sender, EventArgs e)
+        private void BtnBottom_clk(object sender, EventArgs e)   // кнопка Днище
         {
             Detail = new NavigationPage(new Bottom())
             {
