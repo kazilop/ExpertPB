@@ -17,15 +17,55 @@
            <StackLayout Orientation="Horizontal">
                <!--Давление-->
                <Label Text="Введи расчетное давление Pрасч, МПа " VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
-               <Entry Placeholder="2 МПа" HorizontalOptions="CenterAndExpand" x:Name="DN_P_ras"></Entry>
+               <Entry Placeholder="1 МПа" HorizontalOptions="CenterAndExpand" x:Name="DN_P_ras"></Entry>
            </StackLayout>
 
-           <StackLayout Orientation="Horizontal">
-               <!--Темпрература-->
-               <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи расчетную температуру T, C "></Label>
-               <Entry Placeholder=" 20 C" HorizontalOptions="CenterAndExpand" x:Name="DN_T_ras"></Entry>
-           </StackLayout>
-           </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <!--Темпрература-->
+                    <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Введи расчетную температуру T, C "></Label>
+                    <Entry Placeholder=" 20 C" HorizontalOptions="CenterAndExpand" x:Name="DN_T_ras"></Entry>
+                </StackLayout>
+
+               <StackLayout Orientation="Horizontal">
+                   <!--Внутренний диаметр-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Внутренний диаметр, мм"></Label>
+                   <Entry Placeholder=" 1000 мм" HorizontalOptions="CenterAndExpand" x:Name="DN_Dvn"></Entry>
+               </StackLayout>
+
+               <StackLayout Orientation="Horizontal">
+                   <!--толщина стенки-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Толщина стенки днища, мм"></Label>
+                   <Entry Placeholder=" 10 мм" HorizontalOptions="CenterAndExpand" x:Name="DN_S_fakt"></Entry>
+               </StackLayout>
+
+               <StackLayout Orientation="Horizontal">
+                   <!--Высота днища-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Высота днища, мм"></Label>
+                   <Entry Placeholder=" 250 мм" HorizontalOptions="CenterAndExpand" x:Name="DN_H_fakt"></Entry>
+               </StackLayout>
+
+               <StackLayout Orientation="Horizontal">
+                   <!--Допускаемое напряжение-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Допускаемое напряжение, МПа"></Label>
+                   <Entry Placeholder=" 154 МПа" HorizontalOptions="CenterAndExpand" x:Name="DN_Napr_fakt"></Entry>
+               </StackLayout>
+
+                <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Уточните прибавки (Как правило, технологическая прибавка c3 для эллиптических днищ 15% от номинальной толщины стенки днища, 
+                       для полусферических - 10 %."></Label>
+                <StackLayout Orientation="Horizontal">
+                   <!--Прибавки-->
+                   <Label VerticalTextAlignment ="Center" HorizontalOptions="CenterAndExpand" Text="Уточните прибавки"></Label>
+                   <Entry Placeholder=" 1.5 мм" HorizontalOptions="CenterAndExpand" x:Name="DN_Pribavki_fakt"></Entry>
+               </StackLayout>
+
+
+                <Button Text="РАССЧИТАТЬ" Clicked="EllipseCLK"></Button>
+
+               <Label Text="0" x:Name="EllText"></Label>
+               <Label Text="0" x:Name="EllText2"></Label>
+
+
+            </StackLayout>
 
 
 

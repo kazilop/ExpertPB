@@ -12,11 +12,24 @@ namespace ExpertPB
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Bottom : ContentPage
 	{
-		public Bottom ()
+	    Dnishe DnEll = new Dnishe()
+	    {
+	        TypeDn = 0,
+	        P_davlen_Raschet = 1f,
+	        T_Raschet = 20f,
+	        Diametr = 1000f,
+	        s_stenki = 10f,
+	        Dop_Napr = 154f,
+	        Pribavki = 1.5f,
+	        Koeff_svarka = 1
+	    };
+
+
+        public Bottom ()
 		{
 			InitializeComponent ();
 
-            Picker_typeDN.Items.Add("Эллиптическое днище");
+		   Picker_typeDN.Items.Add("Эллиптическое днище");
 		    Picker_typeDN.Items.Add("Полусферическое днище");
             Picker_typeDN.Items.Add("Торосферическое днище");
 		    Picker_typeDN.Items.Add("Плоское днище");
@@ -52,17 +65,33 @@ namespace ExpertPB
             PoluEllipse_DN.IsEnabled = false;
 	        Ellipse_DN.IsEnabled = true;
             Ellipse_DN.IsVisible = true;
-	        
-	    }
+            
 
-	    public void PoluEllipse()
+
+        }
+
+	    private void EllipseCLK(object sender, EventArgs e)
+	    {
+	        DnEll.SetType(0);
+	        DnEll.SetRadius();
+	        DnEll.SetS();
+	        DnEll.SetP();
+
+	        EllText.Text = String.Format("{0} МПа", DnEll.P_Dopust);
+	        EllText2.Text = String.Format("{0} мм", DnEll.S_Raschet);
+        }
+
+
+
+        public void PoluEllipse()
 	    {
 	        PoluEllipse_DN.IsVisible = true;
 	        PoluEllipse_DN.IsEnabled = true;
             Ellipse_DN.IsEnabled = false;
 	        Ellipse_DN.IsVisible = false;
+	        DnEll.TypeDn = 1;
 
-	    }
+        }
 
 
     }
