@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailApp.Android", "MasterDetailApp\MasterDetailApp.Android\MasterDetailApp.Android.csproj", "{DF0CB65D-E0AA-4F10-AB9A-3204401AB494}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertPB.Android", "ExpertPB\ExpertPB.Android\ExpertPB.Android.csproj", "{DF0CB65D-E0AA-4F10-AB9A-3204401AB494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailApp", "MasterDetailApp\MasterDetailApp\MasterDetailApp.csproj", "{E11F3AD7-5B8C-4FD7-AB5B-251FE44654DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertPB", "ExpertPB\ExpertPB\ExpertPB.csproj", "{E11F3AD7-5B8C-4FD7-AB5B-251FE44654DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

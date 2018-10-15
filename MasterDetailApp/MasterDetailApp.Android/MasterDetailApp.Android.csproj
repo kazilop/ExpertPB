@@ -7,7 +7,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>MasterDetailApp.Droid</RootNamespace>
+    <RootNamespace>ExpertPB.Droid</RootNamespace>
     <AssemblyName>ExpertPB.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -94,9 +94,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MasterDetailApp\MasterDetailApp.csproj">
+    <ProjectReference Include="..\ExpertPB\ExpertPB.csproj">
       <Project>{C2977133-99C8-4354-9414-AC1EDD7CACF6}</Project>
-      <Name>MasterDetailApp</Name>
+      <Name>ExpertPB</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

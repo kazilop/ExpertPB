@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MasterDetailApp
+namespace ExpertPB
 {
 	public partial class MainPage : MasterDetailPage
 	{

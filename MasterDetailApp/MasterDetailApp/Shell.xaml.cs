@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MasterDetailApp
+namespace ExpertPB
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Shell : ContentPage
